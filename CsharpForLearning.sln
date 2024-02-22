@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnonymousMethod", "Advanced
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enumeration", "Advanced\Enumeration\Enumeration.csproj", "{616D0B36-47A2-4EC3-9F84-43438276BB0B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nullable", "Advanced\Nullable\Nullable.csproj", "{1691F524-9494-49A4-A602-80B97BBD9BCD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,5 +49,9 @@ Global
 		{616D0B36-47A2-4EC3-9F84-43438276BB0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{616D0B36-47A2-4EC3-9F84-43438276BB0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{616D0B36-47A2-4EC3-9F84-43438276BB0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1691F524-9494-49A4-A602-80B97BBD9BCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1691F524-9494-49A4-A602-80B97BBD9BCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1691F524-9494-49A4-A602-80B97BBD9BCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1691F524-9494-49A4-A602-80B97BBD9BCD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
