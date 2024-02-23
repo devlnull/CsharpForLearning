@@ -9,3 +9,4 @@ In this repository that I'm gathering, I try to collect some useful documents fo
 - [Anonymous Methods](Advanced/AnonymousMethod/Readme.md)
 - [Enumeration](Advanced/Enumeration/Readme.md)
 - [Nullable](Advanced/Nullable/Readme.md)
+- [Extension Methods](Advanced/ExtensionMethods/Readme.md)

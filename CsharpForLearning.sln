@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enumeration", "Advanced\Enu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nullable", "Advanced\Nullable\Nullable.csproj", "{1691F524-9494-49A4-A602-80B97BBD9BCD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtensionMethods", "Advanced\ExtensionMethods\ExtensionMethods.csproj", "{8AF29EA0-8099-41C5-8DA6-068627E5FBC7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,5 +55,9 @@ Global
 		{1691F524-9494-49A4-A602-80B97BBD9BCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1691F524-9494-49A4-A602-80B97BBD9BCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1691F524-9494-49A4-A602-80B97BBD9BCD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AF29EA0-8099-41C5-8DA6-068627E5FBC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AF29EA0-8099-41C5-8DA6-068627E5FBC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AF29EA0-8099-41C5-8DA6-068627E5FBC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AF29EA0-8099-41C5-8DA6-068627E5FBC7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
