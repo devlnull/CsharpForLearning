@@ -1,13 +1,13 @@
 ﻿## Nullable Value Types
 Reference types can represent a nonexistent value with a null reference. Value types,
 however, cannot ordinarily represent null values:
-```
+```csharp
 string s = null; // OK, Reference Type
 int i = null; // Compile Error, Value Type cannot be null
 ```
 To represent null in a value type, you must use a special construct called a nullable
 type. A nullable type is denoted with a value type followed by the ? symbol:
-```
+```csharp
 int? i = null; // OK, Nullable Type
 Console.WriteLine (i == null); // True
 ```
@@ -15,7 +15,7 @@ Console.WriteLine (i == null); // True
 ### Nullable<T> Struct
 T? translates into System.Nullable<T>, which is a lightweight immutable structure,
 having only two fields, to represent Value and HasValue. The essence of System.Nullable<T> is very simple:
-```
+```csharp
 public struct Nullable<T> where T : struct
 {
  public T Value {get;}
@@ -27,7 +27,7 @@ public struct Nullable<T> where T : struct
 ```
 
 ### Implicit and Explicit Nullable Conversions
-```
+```csharp
 int? x = 5; // implicit
 int y = (int)x; // explicit
 ```
@@ -35,14 +35,14 @@ int y = (int)x; // explicit
 ### Boxing and Unboxing Nullable Values
 When T? is boxed, the boxed value on the heap contains T, not T?. This optimization is possible because a boxed value is a reference type that can already express
 null.
-```
+```csharp
 object o = "string";
 int? x = o as int?;
 Console.WriteLine (x.HasValue); // False
 ```
 
 ### Equality operators (== and !=)
-```
+```csharp
 Console.WriteLine ( null == null); // True
 Console.WriteLine ((bool?)null == (bool?)null); // True
 ```
@@ -53,7 +53,7 @@ were many strategies to deal with them, examples of which still appear in the .N
 libraries for historical reasons. One of these strategies is to designate a particular
 non-null value as the “null value”; an example is in the string and array classes.
 String.IndexOf returns the magic value of −1 when the character is not found:
-```
+```csharp
 int i = "Pink".IndexOf ('b');
 Console.WriteLine (i); // −1
 ```
@@ -67,7 +67,7 @@ compiler, in the form of warnings when it detects code that’s at risk of gener
 NullReferenceException.
 To enable nullable reference types, you must either add the Nullable element to
 your .csproj project file (if you want to enable it for the entire project):
-```
+```csharp
 <PropertyGroup>
  <Nullable>enable</Nullable>
 </PropertyGroup>
@@ -77,13 +77,17 @@ your .csproj project file (if you want to enable it for the entire project):
 The compiler also warns you upon dereferencing a nullable reference type, if it
 thinks a NullReferenceException might occur. In the following example, accessing
 the string’s Length property generates a warning: \
-```void Foo (string? s) => Console.Write (s.Length);``` \
+```csharp
+void Foo (string? s) => Console.Write (s.Length);
+``` 
 You can remove the warning with the null-forgiving operator (!): \
-```void Foo (string? s) => Console.Write (s!.Length);``` \
+```csharp
+void Foo (string? s) => Console.Write (s!.Length);
+```
 Our use of the null-forgiving operator in this example is dangerous in that we could
 end up throwing the very NullReferenceException we were trying to avoid in the
 first place. We could fix it as follows:
-```
+```csharp
 void Foo (string? s)
 {
 if (s != null) Console.Write (s.Length);

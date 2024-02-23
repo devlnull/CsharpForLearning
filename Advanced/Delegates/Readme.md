@@ -4,15 +4,19 @@ A delegate is an object that knows how to call a method.
 - A delegate type defines the kind of method that delegate instances can call. Specifically,
 it defines the method’s return type and its parameter types. The following
 defines a delegate type called Transformer: \
-    ``` delegate int Transformer (int x); ``` \
-    \
-    ``` int Square (int x) { return x * x; } ```
+    ```csharp
+        delegate int Transformer (int x); 
+    ```
+    
+    ```csharp
+        int Square (int x) { return x * x; } 
+    ```
 
 ### Instance and Static Method Targets
 A delegate’s target method can be a local, static, or instance method. The following
 illustrates a static target method:
 
-```
+```csharp
 Transformer t = Test.Square;
 Console.WriteLine (t(10)); // 100
 class Test { public static int Square (int x) => x * x; }
@@ -26,7 +30,7 @@ number of arguments. These delegates are the Func and Action delegates, defined
 in the System namespace (the in and out annotations indicate variance, which we
 cover in the context of delegates shortly): 
 
-```
+```csharp
 delegate TResult Func <out TResult> ();
 delegate TResult Func <in T, out TResult> (T arg);
 delegate TResult Func <in T1, in T2, out TResult> (T1 arg1, T2 arg2);
@@ -48,7 +52,7 @@ these conditions are true: \
 - Type Compatibility \
   Delegate types are all incompatible with one another, even if their signatures are the
   same:
-```
+```csharp
 D1 d1 = Method1;
 D2 d2 = d1; // Compile-time error
 void Method1() { }
@@ -57,14 +61,14 @@ delegate void D2();
 ```
 - Parameter compatibility
   (Contravariance)
-```
+```csharp
 StringAction sa = new StringAction (ActOnObject);
 sa ("hello");
 void ActOnObject (object o) => Console.WriteLine (o); // hello
 delegate void StringAction (string s);
 ```
 - Return type compatibility
-```
+```csharp
 ObjectRetriever o = new ObjectRetriever (RetrieveString);
 object result = o();
 Console.WriteLine (result); // hello

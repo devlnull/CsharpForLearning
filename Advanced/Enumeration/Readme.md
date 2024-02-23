@@ -16,12 +16,12 @@ enumerator
 - (From C# 9) Can bind to an extension method named GetEnumerator that returns an enumerator
 
 Here is the high-level way of iterating through the characters in the word “beer” using a foreach statement: 
-```
+```csharp
 foreach (char c in "beer")
 Console.WriteLine (c);
 ```
 Here is the low-level way of iterating through the characters in “beer” without using a foreach statement:
-```
+```csharp
 using (var enumerator = "beer".GetEnumerator())
 while (enumerator.MoveNext())
 {
@@ -37,7 +37,7 @@ Whereas a foreach statement is a consumer of an enumerator, an iterator is a
 producer of an enumerator. In this example, we use an iterator to return a sequence
 of Fibonacci numbers (where each number is the sum of the previous two)
 
-```
+```csharp
 using System;
 using System.Collections.Generic;
 foreach (int fib in Fibs(6))
@@ -64,7 +64,7 @@ caller has finished enumerating.
 
 
 Multiple yield statements are permitted:
-```
+```csharp
 foreach (string s in Foo())
 Console.WriteLine(s); // Prints "One","Two","Three"
 IEnumerable<string> Foo()
@@ -78,7 +78,7 @@ IEnumerable<string> Foo()
 A return statement is illegal in an iterator block; instead you must use the yield
 break statement to indicate that the iterator block should exit early, without returning more elements. We can modify Foo as follows to demonstrate:
 
-```
+```csharp
 IEnumerable<string> Foo (bool breakEarly)
 {
      yield return "One";
@@ -91,7 +91,7 @@ IEnumerable<string> Foo (bool breakEarly)
 
 #### Composing Sequences
 Iterators are highly composable. We can extend our example, this time to output even Fibonacci numbers only:
-```
+```csharp
     public void Execute()
     {
         foreach (int fib in EvenNumbersOnly (Fibs(6)))

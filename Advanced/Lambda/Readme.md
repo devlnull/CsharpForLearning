@@ -8,7 +8,7 @@ inside the lambda expression in a traversable object model. This allows the
 lambda expression to be interpreted later at runtime.
 
 In the following example, `x => x * x` is a lambda expression:
-```
+```csharp
 Transformer sqr = x => x * x;
 Console.WriteLine (sqr(3)); // 9
 delegate int Transformer (int i);
@@ -25,14 +25,14 @@ so you will most often see our earlier expression written as follows: `Func<int,
 - Default Lambda Parameters (C# 12) =>  `void Print (string message = "") => Console.WriteLine (message);`
 
 - Capturing Outer Variables => 
-```
+```csharp
 int factor = 2;
 Func<int, int> multiplier = n => n * factor;
 Console.WriteLine (multiplier (3)); // 6
 ```
 
 ### Static Lambdas
-```
+```csharp
 void Foo()
 {
  int factor = 123;

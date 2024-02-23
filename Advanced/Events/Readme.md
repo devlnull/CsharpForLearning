@@ -11,7 +11,7 @@ Events are a language feature that formalizes this pattern. An event is a constr
 that exposes just the subset of delegate features required for the broadcaster/subscriber model. The main purpose of events is to prevent subscribers from interfering
 with one another.
 
-```
+```csharp
 // Delegate definition
 public delegate void PriceChangedHandler (decimal oldPrice, decimal newPrice);
 
@@ -29,7 +29,7 @@ defined .NET class with no members (other than the static Empty field). EventArg
 is a base class for conveying information for an event. In our Stock example, we
 would subclass EventArgs to convey the old and new prices when a PriceChanged
 event is fired:
-```
+```csharp
 public class PriceChangedEventArgs : System.EventArgs
 {
  public readonly decimal LastPrice;

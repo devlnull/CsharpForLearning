@@ -8,13 +8,13 @@ the following features:
 - The ability to compile to an expression tree, by assigning to Expression<T>
 
 An anonymous method uses the delegate keyword followed (optionally) by a parameter declaration and then a method body. For example:
-```
+```csharp
 Transformer sqr = delegate (int x) {return x * x;};
 Console.WriteLine (sqr(3)); // 9
 delegate int Transformer (int i);
 ```
 
-```
+```csharp
 Transformer sqr = (int x) => {return x * x;};
 ```
 
