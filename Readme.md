@@ -11,3 +11,4 @@ In this repository that I'm gathering, I try to collect some useful documents fo
 - [Nullable](Advanced/Nullable/Readme.md)
 - [Extension Methods](Advanced/ExtensionMethods/Readme.md)
 - [Anonymous Types](Advanced/AnonymousTypes/Readme.md)
+- [Records](Advanced/Records/Readme.md)
