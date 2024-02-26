@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tuples", "Advanced\Tuples\T
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Records", "Advanced\Records\Records.csproj", "{E041EEB3-242A-4FE5-B270-D75565D7127E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Patterns", "Advanced\Patterns\Patterns.csproj", "{55CC3F96-BACC-49F2-AFEF-FBF5EEB76894}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -77,5 +79,9 @@ Global
 		{E041EEB3-242A-4FE5-B270-D75565D7127E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E041EEB3-242A-4FE5-B270-D75565D7127E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E041EEB3-242A-4FE5-B270-D75565D7127E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55CC3F96-BACC-49F2-AFEF-FBF5EEB76894}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55CC3F96-BACC-49F2-AFEF-FBF5EEB76894}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55CC3F96-BACC-49F2-AFEF-FBF5EEB76894}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55CC3F96-BACC-49F2-AFEF-FBF5EEB76894}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
